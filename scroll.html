@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <style type="text/css">
+  div,span,img{
+    margin: 0;
+    padding: 0;
+  }
+  .yy_main{
+    overflow:hidden;
+    width: 700px;
+    height: 500px;
+    margin: 10px auto;
+    position:relative;
+
+  }
+   .yy_main img{
+    width:100%;
+    height: 100%;
+     position: absolute;
+     -webkit-transform:translate(700px,0);
+     -moz-transform:translate(700px,0);
+     -o-transform:translate(700px,0);
+     transform:translate(700px,0);
+  }
+
+   .yy_left{
+    position: absolute;
+    top:50%;
+    z-index:100;
+    border-radius: 0px 20px 20px 0px ;
+   }
+   .yy_right{
+    position: absolute;
+    right:0;
+     top:50%;
+     z-index:100;
+     border-radius:20px  0px 0px 20px ;
+   }
+   .yy_pointer{
+    height: 40px;
+    width: 30px;
+    background: #ccc;
+    line-height: 40px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+   }
+      .yy_main img:first-child{
+    -webkit-transform:translate(0,0);
+    -moz-transform:translate(0,0);
+    -o-transform:translate(0,0);
+    transform:translate(0,0);
+   }
+  </style>
+</head>
+<body>
+
+  <div class="yy_main">
+    <img src="1.jpg"/>
+    <img src="2.jpg"/>
+    <img src="3.jpg"/>
+    <img src="4.jpg"/>
+    <img src="5.jpg"/>
+    <img src="6.jpg"/>
+    <span class='yy_left yy_pointer'>&lt</span>
+    <span class='yy_right yy_pointer'>&gt</span>
+  </div>
+
+  <script type="text/javascript" src='jquery-2.1.4.min.js'></script>
+  <script type="text/javascript" src='scroll.js'>
+
+</script>
+<script type="text/javascript">
+  $(function(){
+    var c= new ScrollPlayer();
+  })
+  
+</script>
+</body>
+</html>
